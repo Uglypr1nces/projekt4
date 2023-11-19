@@ -1,10 +1,20 @@
 namespace projekt4
 {
-    public partial class Form1 : Form
+    public partial class ToDoApp : Form
     {
-        public Form1()
+        public ToDoApp()
         {
             InitializeComponent();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
