@@ -34,7 +34,11 @@
             button2 = new Button();
             button1 = new Button();
             panelLogo = new Panel();
+            panel1 = new Panel();
+            label1 = new Label();
+            panel2 = new Panel();
             panelMenu.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panelMenu
@@ -48,7 +52,7 @@
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(200, 995);
+            panelMenu.Size = new Size(200, 993);
             panelMenu.TabIndex = 0;
             panelMenu.Paint += panel1_Paint;
             // 
@@ -62,6 +66,7 @@
             button4.TabIndex = 4;
             button4.Text = "button4";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -73,6 +78,7 @@
             button3.TabIndex = 3;
             button3.Text = "button3";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -84,18 +90,19 @@
             button2.TabIndex = 2;
             button2.Text = "button2";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.Transparent;
-            button1.Image = Properties.Resources.calenderall_com__1_;
             button1.Location = new Point(0, 287);
             button1.Name = "button1";
             button1.Size = new Size(194, 83);
             button1.TabIndex = 1;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // panelLogo
             // 
@@ -108,16 +115,47 @@
             panelLogo.TabIndex = 0;
             panelLogo.Paint += panelLogo_Paint;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.SlateGray;
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(200, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1274, 995);
+            panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(158, 101);
+            label1.MaximumSize = new Size(2000, 200000);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 15);
+            label1.TabIndex = 0;
+            label1.Click += label1_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.DarkSlateBlue;
+            panel2.Location = new Point(1451, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(243, 995);
+            panel2.TabIndex = 2;
+            // 
             // ToDoApp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1691, 995);
+            ClientSize = new Size(1694, 993);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Controls.Add(panelMenu);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ToDoApp";
             Text = "Form1";
             panelMenu.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -129,5 +167,8 @@
         private Button button4;
         private Button button3;
         private Button button2;
+        private Panel panel1;
+        private Panel panel2;
+        private Label label1;
     }
 }
