@@ -8,7 +8,7 @@ namespace projekt4
             Tasks goofy = new Tasks("boobo", 12, 14);
 
         }
-
+        //
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
