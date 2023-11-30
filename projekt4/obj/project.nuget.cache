@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2hMKWS1GFruTugDdtkVrkPZJZ73grPW07TI+yJeav0OLAok1r2I6dUT9Eb6M0wRhXFBT5Flt7WeQ1AtM1a4Hyw==",
+  "dgSpecHash": "XkqCA1Fr18Ph4UXu/L1mgephkkSJmzKVpeDIA7weDGVy/jx0s41OmkZCf6owOSTinYlA/9yhNDCNbCVmAsVSpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aqua\\Source\\Repos\\login-fenster\\projekt9\\projekt4\\projekt4.csproj",
+  "projectFilePath": "C:\\Users\\aqua\\source\\repos\\projekt4\\projekt4\\projekt4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aqua\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
     "C:\\Users\\aqua\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",

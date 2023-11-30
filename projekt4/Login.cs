@@ -15,6 +15,7 @@ namespace projekt4
         public form1()
         {
             InitializeComponent();
+            panel3.Visible = false;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -31,10 +32,9 @@ namespace projekt4
         {
             if (textBox1.Text == "bob" && txtpassword.Text == "123")
             {
-                ToDoApp mainform= new ToDoApp();
+                ToDoApp mainform = new ToDoApp();
                 mainform.Show();
                 this.Hide();
-
             }
 
             else
@@ -51,6 +51,49 @@ namespace projekt4
         {
 
         }
+        private void form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            button1.Visible = false;
+            panel3.Visible = true;
+            textBox2.Text = "username";
+            textBox3.Text = "password";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string newusername = textBox2.Text;
+            string newpassword = textBox3.Text;
+
+            if (string.IsNullOrEmpty(newusername) || string.IsNullOrEmpty(newpassword))
+            {
+                MessageBox.Show("Please put in your username and password");
+            }
+            else if (true)
+            {
+                //check if username is available
+
+            }
+             else
+            {
+                //add user to the databank
+
+            }
+        }
     }
 }
-
