@@ -54,3 +54,14 @@ C:\Users\aqua\Source\Repos\projekt4\projekt4\obj\Debug\net6.0-windows\refint\pro
 C:\Users\aqua\Source\Repos\projekt4\projekt4\obj\Debug\net6.0-windows\projekt4.pdb
 C:\Users\aqua\Source\Repos\projekt4\projekt4\obj\Debug\net6.0-windows\projekt4.genruntimeconfig.cache
 C:\Users\aqua\Source\Repos\projekt4\projekt4\obj\Debug\net6.0-windows\ref\projekt4.dll
+C:\Users\aqua\source\repos\projekt4\projekt4\obj\Debug\net6.0-windows\projekt4.tasks.resources
+C:\Users\aqua\source\repos\projekt4\projekt4\bin\Debug\net6.0-windows\projekt4.dll.config
+C:\Users\aqua\source\repos\projekt4\projekt4\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\aqua\source\repos\projekt4\projekt4\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\aqua\source\repos\projekt4\projekt4\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\aqua\source\repos\projekt4\projekt4\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\aqua\source\repos\projekt4\projekt4\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\aqua\source\repos\projekt4\projekt4\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\aqua\source\repos\projekt4\projekt4\obj\Debug\net6.0-windows\projekt4.csproj.AssemblyReference.cache
+C:\Users\aqua\source\repos\projekt4\projekt4\obj\Debug\net6.0-windows\projekt4.csproj.CopyComplete
+C:\Users\aqua\source\repos\projekt4\projekt4\bin\Debug\net6.0-windows\databank\benutzer.mdf
