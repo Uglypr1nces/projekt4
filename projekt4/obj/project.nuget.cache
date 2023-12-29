@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sdrcc9pG0/GekTC5Xc+lrhEnk7pUDuvq0LWl5+thG4yfuyvot6IRMbvN6J5UXHiH0jJiFvGEQc/v66EytsE5/w==",
+  "dgSpecHash": "kP7p3keqtw4ZQV5nBu6D+i00WZBsWo9sIXyYWGYO3mpRTvldMIiAbIerCLfM1VVDc/fBuDm0ipd9A9sk0AQJgQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aqua\\source\\repos\\projekt93\\projekt4\\projekt4.csproj",
+  "projectFilePath": "C:\\Users\\aqua\\Source\\Repos\\projekt4\\projekt4\\projekt4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aqua\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\aqua\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

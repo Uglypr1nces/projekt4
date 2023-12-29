@@ -64,7 +64,6 @@ C:\Users\aqua\source\repos\projekt4\projekt4\bin\Debug\net6.0-windows\runtimes\u
 C:\Users\aqua\source\repos\projekt4\projekt4\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\aqua\source\repos\projekt4\projekt4\obj\Debug\net6.0-windows\projekt4.csproj.AssemblyReference.cache
 C:\Users\aqua\source\repos\projekt4\projekt4\obj\Debug\net6.0-windows\projekt4.csproj.CopyComplete
-C:\Users\aqua\source\repos\projekt4\projekt4\bin\Debug\net6.0-windows\databank\benutzer.mdf
 C:\Users\ben\source\repos\projekt5\projekt4\bin\Debug\net6.0-windows\projekt4.exe
 C:\Users\ben\source\repos\projekt5\projekt4\bin\Debug\net6.0-windows\projekt4.dll.config
 C:\Users\ben\source\repos\projekt5\projekt4\bin\Debug\net6.0-windows\projekt4.deps.json

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aqua\\source\\repos\\projekt93\\projekt4\\projekt4.csproj": {}
+    "C:\\Users\\aqua\\Source\\Repos\\projekt4\\projekt4\\projekt4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aqua\\source\\repos\\projekt93\\projekt4\\projekt4.csproj": {
+    "C:\\Users\\aqua\\Source\\Repos\\projekt4\\projekt4\\projekt4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aqua\\source\\repos\\projekt93\\projekt4\\projekt4.csproj",
+        "projectUniqueName": "C:\\Users\\aqua\\Source\\Repos\\projekt4\\projekt4\\projekt4.csproj",
         "projectName": "projekt4",
-        "projectPath": "C:\\Users\\aqua\\source\\repos\\projekt93\\projekt4\\projekt4.csproj",
+        "projectPath": "C:\\Users\\aqua\\Source\\Repos\\projekt4\\projekt4\\projekt4.csproj",
         "packagesPath": "C:\\Users\\aqua\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aqua\\source\\repos\\projekt93\\projekt4\\obj\\",
+        "outputPath": "C:\\Users\\aqua\\Source\\Repos\\projekt4\\projekt4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

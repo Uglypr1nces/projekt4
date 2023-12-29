@@ -124,7 +124,7 @@ namespace projekt4
 
                     if (listBox1.SelectedIndex >= 0)
                     {
-                        taskForm.Changestuff(selectedTask.TaskName, selectedTask.Importance, selectedTask.Date, selectedTask.Description);
+                        taskForm.Changestuff(selectedTask.TaskName, selectedTask.Importance, selectedTask.Description, selectedTask.Date);
                         if (taskForm.ShowDialog() == DialogResult.OK)
                         {
                             string taskName = taskForm.TaskName;
