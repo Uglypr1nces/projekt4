@@ -13,7 +13,7 @@ using System.Data.SqlClient;
 
 namespace projekt4
 {
-  
+
     public partial class form1 : Form
     {
         private string connectionString;
@@ -145,6 +145,11 @@ namespace projekt4
                     MessageBox.Show($"An error occurred: {ex.Message}");
                 }
             }
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

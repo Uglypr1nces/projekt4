@@ -42,6 +42,7 @@
             // 
             // richTextBox1
             // 
+            richTextBox1.BackColor = SystemColors.InactiveCaption;
             richTextBox1.Location = new Point(12, 12);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(202, 99);
@@ -50,6 +51,7 @@
             // 
             // richTextBox3
             // 
+            richTextBox3.BackColor = SystemColors.InactiveCaption;
             richTextBox3.Location = new Point(503, 12);
             richTextBox3.Name = "richTextBox3";
             richTextBox3.Size = new Size(202, 99);
@@ -58,6 +60,7 @@
             // 
             // richTextBox2
             // 
+            richTextBox2.BackColor = SystemColors.InactiveCaption;
             richTextBox2.Location = new Point(253, 12);
             richTextBox2.Name = "richTextBox2";
             richTextBox2.Size = new Size(202, 99);
@@ -66,12 +69,13 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.LightSteelBlue;
             button1.Location = new Point(434, 165);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 4;
             button1.Text = "fertig";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // label1
@@ -110,6 +114,7 @@
             label4.Size = new Size(66, 15);
             label4.TabIndex = 8;
             label4.Text = "description";
+            label4.Click += label4_Click;
             // 
             // dateTimePicker2
             // 
@@ -122,6 +127,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(957, 200);
             Controls.Add(dateTimePicker2);
             Controls.Add(label4);

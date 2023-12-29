@@ -28,7 +28,7 @@ namespace projekt4
 
                     task newtask = new task(taskName, importance, date, description);
                     listBox1.Items.Add(taskName);
-                    taskss.Add(newtask); 
+                    taskss.Add(newtask);
                 }
             }
         }
@@ -115,6 +115,16 @@ namespace projekt4
                 label4.Text = currenttask.Date;
                 label5.Text = currenttask.Description;
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

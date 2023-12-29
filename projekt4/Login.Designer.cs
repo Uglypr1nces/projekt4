@@ -41,18 +41,20 @@
             txtpassword = new TextBox();
             log_in = new Button();
             panel3 = new Panel();
+            button2 = new Button();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            label4 = new Label();
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             button1 = new Button();
-            label4 = new Label();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            button2 = new Button();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -184,6 +186,9 @@
             // 
             // panel3
             // 
+            panel3.BackColor = Color.Black;
+            panel3.Controls.Add(textBox5);
+            panel3.Controls.Add(textBox4);
             panel3.Controls.Add(button2);
             panel3.Controls.Add(pictureBox4);
             panel3.Controls.Add(pictureBox3);
@@ -196,40 +201,26 @@
             panel3.TabIndex = 13;
             panel3.Paint += panel3_Paint;
             // 
-            // textBox3
+            // button2
             // 
-            textBox3.Location = new Point(115, 277);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(146, 23);
-            textBox3.TabIndex = 1;
+            button2.Location = new Point(29, 342);
+            button2.Name = "button2";
+            button2.Size = new Size(279, 47);
+            button2.TabIndex = 16;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
-            // textBox2
+            // pictureBox4
             // 
-            textBox2.Location = new Point(116, 210);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(145, 23);
-            textBox2.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(23, 408);
-            button1.Name = "button1";
-            button1.Size = new Size(285, 45);
-            button1.TabIndex = 14;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.Highlight;
-            label4.Location = new Point(97, 70);
-            label4.Name = "label4";
-            label4.Size = new Size(136, 37);
-            label4.TabIndex = 2;
-            label4.Text = "SIGN IN";
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(41, 183);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(52, 54);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 15;
+            pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -242,26 +233,61 @@
             pictureBox3.TabIndex = 15;
             pictureBox3.TabStop = false;
             // 
-            // pictureBox4
+            // label4
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(41, 183);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(48, 50);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 15;
-            pictureBox4.TabStop = false;
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.Highlight;
+            label4.Location = new Point(97, 70);
+            label4.Name = "label4";
+            label4.Size = new Size(136, 37);
+            label4.TabIndex = 2;
+            label4.Text = "SIGN IN";
             // 
-            // button2
+            // textBox3
             // 
-            button2.Location = new Point(29, 342);
-            button2.Name = "button2";
-            button2.Size = new Size(279, 47);
-            button2.TabIndex = 16;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            textBox3.Location = new Point(115, 277);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(146, 23);
+            textBox3.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(115, 210);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(146, 23);
+            textBox2.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(29, 408);
+            button1.Name = "button1";
+            button1.Size = new Size(279, 45);
+            button1.TabIndex = 14;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
+            // textBox4
+            // 
+            textBox4.BackColor = SystemColors.InactiveCaptionText;
+            textBox4.ForeColor = SystemColors.MenuHighlight;
+            textBox4.Location = new Point(115, 248);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(100, 23);
+            textBox4.TabIndex = 17;
+            textBox4.Text = "Kennwort";
+            // 
+            // textBox5
+            // 
+            textBox5.BackColor = SystemColors.InactiveCaptionText;
+            textBox5.ForeColor = SystemColors.MenuHighlight;
+            textBox5.Location = new Point(115, 183);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(100, 23);
+            textBox5.TabIndex = 18;
+            textBox5.Text = "Username";
+            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // form1
             // 
@@ -294,8 +320,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -321,5 +347,7 @@
         private Button button2;
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
+        private TextBox textBox5;
+        private TextBox textBox4;
     }
 }
