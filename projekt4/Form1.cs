@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace projekt4
 {
@@ -9,7 +9,8 @@ namespace projekt4
     {
         private tasks tasksform;
         private List<task> taskss = new List<task>();
-        public string csvfile = Path.Combine(@"C:\Users\aqua\source\repos\projekt93\projekt4\databank\tasks.csv");
+        public string csvfile = Path.Combine(@"C:\Users\aqua\source\repos\projekt4\projekt4\databank\tasks.csv");
+
         public ToDoApp()
         {
             InitializeComponent();
@@ -19,18 +20,35 @@ namespace projekt4
             {
                 var values = line.Split(';');
 
-                // Check if values array has enough elements
                 if (values.Length >= 4)
                 {
                     string name = values[0].Trim();
                     string description = values[1].Trim();
                     string importance = values[2].Trim();
 
-                    // Adjust the date parsing to handle the format
                     string[] dateParts = values[3].Trim().Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                    string date = $"{dateParts[1]} {dateParts[2]} {dateParts[3]}";
+                    string date = "";
 
-                    // Continue with your existing code...
+                    if (dateParts.Length >= 4)
+                    {
+                        string month = dateParts[1];
+                        string day = dateParts[2];
+                        string year = dateParts[3];
+
+                        date = $"{month} {day} {year}";
+
+                        if (!DateTime.TryParse(date, out _))
+                        {
+                            MessageBox.Show($"Invalid date format: {date}");
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Invalid date format: {values[3]}");
+                        continue;
+                    }
+
                     task newtask = new task(name, description, importance, date);
                     taskss.Add(newtask);
                     listBox1.Items.Add(newtask.TaskName);
@@ -40,7 +58,6 @@ namespace projekt4
                     MessageBox.Show($"Invalid line in CSV file: {line}");
                 }
             }
-
         }
 
         public void button1_Click(object sender, EventArgs e)
@@ -69,7 +86,6 @@ namespace projekt4
                     catch (Exception ex)
                     {
                         MessageBox.Show($"An error occurred while reading the CSV file: {ex.Message}");
-
                     }
                 }
             }
@@ -81,43 +97,34 @@ namespace projekt4
             {
                 taskss.RemoveAt(listBox1.SelectedIndex);
                 listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             listBox1.Items.Clear();
 
             foreach (task thistask in taskss)
             {
-                if (thistask.Importance == "wenig")
+                if (thistask.Importance == "wenig" || thistask.Importance == "mittel" || thistask.Importance == "sehr")
                 {
                     listBox1.Items.Add(thistask.TaskName);
                 }
-                else if (thistask.Importance == "mittel")
-                {
-                    listBox1.Items.Add(thistask.TaskName);
-                }
-                else if (thistask.Importance == "sehr")
-                {
-                    listBox1.Items.Add(thistask.TaskName);
-                }
-
             }
         }
+
         private void button4_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedIndex != -1)
             {
                 using (var taskForm = new tasks())
                 {
-                    task selctedtask = taskss[listBox1.SelectedIndex];
+                    task selectedTask = taskss[listBox1.SelectedIndex];
 
                     if (listBox1.SelectedIndex >= 0)
                     {
-
-                        taskForm.Changestuff(selctedtask.TaskName, selctedtask.Importance, selctedtask.Date, selctedtask.Description);
+                        taskForm.Changestuff(selectedTask.TaskName, selectedTask.Importance, selectedTask.Date, selectedTask.Description);
                         if (taskForm.ShowDialog() == DialogResult.OK)
                         {
                             string taskName = taskForm.TaskName;
@@ -136,7 +143,7 @@ namespace projekt4
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (taskss.Count > 0)
+            if (taskss.Count > 0 && listBox1.SelectedIndex != -1)
             {
                 task currenttask = taskss[listBox1.SelectedIndex];
                 label2.Text = currenttask.TaskName;

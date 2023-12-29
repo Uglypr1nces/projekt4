@@ -79,7 +79,7 @@ namespace projekt4
             string newusername = textBox2.Text;
             string newpassword = textBox3.Text;
 
-            if (adduser("C:\\Users\\aqua\\source\\repos\\projekt93\\projekt4\\databank\\users.csv", newusername, newpassword))
+            if (adduser("C:\\Users\\aqua\\source\\repos\\projekt4\\projekt4\\databank\\users.csv", newusername, newpassword))
             {
                 MessageBox.Show("user added!");
             }
@@ -100,7 +100,7 @@ namespace projekt4
             {
                 try
                 {
-                    string dataFilePath = Path.Combine(@"C:\Users\aqua\source\repos\projekt93\projekt4\databank\users.csv");
+                    string dataFilePath = Path.Combine(@"C:\Users\aqua\source\repos\projekt4\projekt4\databank\users.csv");
                     if (File.Exists(dataFilePath))
                     {
                         if (UserExists(dataFilePath, newusername, newpassword))

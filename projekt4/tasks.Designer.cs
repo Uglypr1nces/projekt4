@@ -81,44 +81,43 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Plack the Hanet", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(69, 119);
             label1.Name = "label1";
-            label1.Size = new Size(61, 20);
+            label1.Size = new Size(61, 24);
             label1.TabIndex = 5;
             label1.Text = "Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Plack the Hanet", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(463, 123);
             label2.Name = "label2";
-            label2.Size = new Size(281, 16);
+            label2.Size = new Size(216, 20);
             label2.TabIndex = 6;
             label2.Text = "importance(sehr,mittel,wenig)";
-            label2.Click += label2_Click;
+            
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Plack the Hanet", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label3.Location = new Point(803, 123);
             label3.Name = "label3";
-            label3.Size = new Size(57, 20);
+            label3.Size = new Size(46, 24);
             label3.TabIndex = 7;
             label3.Text = "date";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Plack the Hanet", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(288, 120);
             label4.Name = "label4";
-            label4.Size = new Size(137, 20);
+            label4.Size = new Size(102, 24);
             label4.TabIndex = 8;
             label4.Text = "description";
-            label4.Click += label4_Click;
             // 
             // dateTimePicker2
             // 
@@ -126,6 +125,7 @@
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(204, 23);
             dateTimePicker2.TabIndex = 10;
+            
             // 
             // tasks
             // 
