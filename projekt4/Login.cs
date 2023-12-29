@@ -16,51 +16,57 @@ namespace projekt4
 
     public partial class form1 : Form
     {
-        private string connectionString;
         public form1()
         {
-            AppDomain.CurrentDomain.SetData("DataDirectory", AppDomain.CurrentDomain.BaseDirectory);
             InitializeComponent();
-            panel3.Visible = false;
-            connectionString = ConfigurationManager.ConnectionStrings["mydatabase"].ConnectionString;
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private bool UserExists(string filePath, string username, string password)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "bob" && txtpassword.Text == "123")
+            try
             {
-                ToDoApp mainform = new ToDoApp();
-                mainform.Show();
-                this.Hide();
-            }
+                var lines = File.ReadLines(filePath);
 
-            else
+                foreach (var line in lines.Skip(1))
+                {
+                    var values = line.Split(',');
+
+                    string existingUsername = values[0].Trim();
+                    string existingPassword = values[1].Trim();
+
+                    if (existingUsername == username && existingPassword == password)
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("The User name or password you entered is incorrect, try again ");
-                txtUserName.Clear();
-                txtpassword.Clear();
-                txtUserName.Focus();
+                MessageBox.Show($"An error occurred while reading the CSV file: {ex.Message}");
+                return false;
             }
-
         }
 
-        private void label2_Click_1(object sender, EventArgs e)
+        private bool adduser(string filePath, string username, string password)
         {
+            try
+            {
+                using (StreamWriter sw = File.AppendText(filePath))
+                {
+                    sw.WriteLine($"{username},{password}");
+                }
 
-        }
-        private void form1_Load(object sender, EventArgs e)
-        {
+                MessageBox.Show("User added successfully.");
 
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while reading the CSV file: {ex.Message}");
+                return false;
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -68,24 +74,21 @@ namespace projekt4
             this.Close();
         }
 
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            string newusername = textBox2.Text;
+            string newpassword = textBox3.Text;
+
+            if (adduser("C:\\Users\\aqua\\source\\repos\\projekt93\\projekt4\\databank\\users.csv", newusername, newpassword))
+            {
+                MessageBox.Show("user added!");
+            }
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            button1.Visible = false;
-            panel3.Visible = true;
-            textBox2.Text = "username";
-            textBox3.Text = "password";
 
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
             string newusername = textBox2.Text;
             string newpassword = textBox3.Text;
 
@@ -97,47 +100,24 @@ namespace projekt4
             {
                 try
                 {
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    string dataFilePath = Path.Combine(@"C:\Users\aqua\source\repos\projekt93\projekt4\databank\users.csv");
+                    if (File.Exists(dataFilePath))
                     {
-                        connection.Open();
-
-                        // Check if the username is available
-                        string checkQuery = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
-
-                        using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection))
+                        if (UserExists(dataFilePath, newusername, newpassword))
                         {
-                            checkCommand.Parameters.AddWithValue("@Username", newusername);
-
-                            int existingUserCount = (int)checkCommand.ExecuteScalar();
-
-                            if (existingUserCount > 0)
-                            {
-                                MessageBox.Show("Username already exists. Please choose a different one.");
-                                return;
-                            }
+                            MessageBox.Show("Login successful!");
+                            ToDoApp mainform = new ToDoApp();
+                            mainform.Show();
+                            this.Hide();
                         }
-
-                        // Add the user to the database
-                        string insertQuery = "INSERT INTO Users (Username, Password) VALUES (@Username, @Password)";
-
-                        using (SqlCommand insertCommand = new SqlCommand(insertQuery, connection))
+                        else
                         {
-                            // Hash the password (using a secure hashing algorithm)
-                            // For simplicity, we're storing the plain text password here
-                            insertCommand.Parameters.AddWithValue("@Username", newusername);
-                            insertCommand.Parameters.AddWithValue("@Password", newpassword);
-
-                            int rowsAffected = insertCommand.ExecuteNonQuery();
-
-                            if (rowsAffected > 0)
-                            {
-                                MessageBox.Show("User added successfully!");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Failed to add user.");
-                            }
+                            MessageBox.Show("Invalid username or password");
                         }
+                    }
+                    else
+                    {
+                        MessageBox.Show("CSV file not found");
                     }
                 }
                 catch (Exception ex)
@@ -145,11 +125,6 @@ namespace projekt4
                     MessageBox.Show($"An error occurred: {ex.Message}");
                 }
             }
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

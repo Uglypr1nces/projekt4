@@ -61,30 +61,29 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(23, 28);
+            label2.Font = new Font("Plack the Hanet", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(6, 6);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(67, 16);
             label2.TabIndex = 0;
             label2.Text = "label2";
             // 
             // listBox1
             // 
             listBox1.BackColor = Color.SlateGray;
-            listBox1.Font = new Font("Showcard Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 23;
+            listBox1.ItemHeight = 24;
             listBox1.Location = new Point(203, 3);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(697, 441);
+            listBox1.Size = new Size(697, 436);
             listBox1.TabIndex = 0;
             // 
             // timer1
-            // 
-            timer1.Tick += timer1_Tick;
-            // 
             // button1
             // 
             button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Plack the Hanet", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.Black;
             button1.Location = new Point(3, 3);
             button1.Name = "button1";
@@ -97,6 +96,7 @@
             // button2
             // 
             button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Plack the Hanet", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.Black;
             button2.Location = new Point(3, 92);
             button2.Name = "button2";
@@ -109,6 +109,7 @@
             // button3
             // 
             button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Plack the Hanet", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.Black;
             button3.Location = new Point(3, 181);
             button3.Name = "button3";
@@ -121,6 +122,7 @@
             // button4
             // 
             button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Plack the Hanet", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = Color.Black;
             button4.Location = new Point(3, 270);
             button4.Name = "button4";
@@ -133,8 +135,9 @@
             // button5
             // 
             button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Plack the Hanet", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             button5.ForeColor = Color.Black;
-            button5.Location = new Point(3, 369);
+            button5.Location = new Point(3, 359);
             button5.Name = "button5";
             button5.Size = new Size(194, 83);
             button5.TabIndex = 5;
@@ -147,15 +150,16 @@
             panel6.Controls.Add(label5);
             panel6.Location = new Point(906, 335);
             panel6.Name = "panel6";
-            panel6.Size = new Size(259, 117);
+            panel6.Size = new Size(259, 107);
             panel6.TabIndex = 1;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(13, 14);
+            label5.Font = new Font("Plack the Hanet", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(3, 11);
             label5.Name = "label5";
-            label5.Size = new Size(38, 15);
+            label5.Size = new Size(67, 16);
             label5.TabIndex = 3;
             label5.Text = "label5";
             // 
@@ -170,9 +174,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(13, 50);
+            label4.Font = new Font("Plack the Hanet", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(3, 9);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(67, 16);
             label4.TabIndex = 2;
             label4.Text = "label4";
             // 
@@ -187,9 +192,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(23, 48);
+            label3.Font = new Font("Plack the Hanet", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(3, 10);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(67, 16);
             label3.TabIndex = 1;
             label3.Text = "label3";
             // 
@@ -198,7 +204,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(1173, 469);
+            ClientSize = new Size(1173, 448);
             Controls.Add(listBox1);
             Controls.Add(panel9);
             Controls.Add(panel7);

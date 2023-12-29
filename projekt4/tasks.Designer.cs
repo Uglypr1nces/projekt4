@@ -70,7 +70,7 @@
             // button1
             // 
             button1.BackColor = Color.LightSteelBlue;
-            button1.Location = new Point(434, 165);
+            button1.Location = new Point(432, 152);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 4;
@@ -81,18 +81,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(81, 147);
+            label1.Font = new Font("Plack the Hanet", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(69, 119);
             label1.Name = "label1";
-            label1.Size = new Size(39, 15);
+            label1.Size = new Size(61, 20);
             label1.TabIndex = 5;
             label1.Text = "Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(538, 147);
+            label2.Font = new Font("Plack the Hanet", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(463, 123);
             label2.Name = "label2";
-            label2.Size = new Size(167, 15);
+            label2.Size = new Size(281, 16);
             label2.TabIndex = 6;
             label2.Text = "importance(sehr,mittel,wenig)";
             label2.Click += label2_Click;
@@ -100,18 +102,20 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(807, 147);
+            label3.Font = new Font("Plack the Hanet", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(803, 123);
             label3.Name = "label3";
-            label3.Size = new Size(30, 15);
+            label3.Size = new Size(57, 20);
             label3.TabIndex = 7;
             label3.Text = "date";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(322, 147);
+            label4.Font = new Font("Plack the Hanet", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(288, 120);
             label4.Name = "label4";
-            label4.Size = new Size(66, 15);
+            label4.Size = new Size(137, 20);
             label4.TabIndex = 8;
             label4.Text = "description";
             label4.Click += label4_Click;
@@ -125,10 +129,11 @@
             // 
             // tasks
             // 
+            AllowDrop = true;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(957, 200);
+            ClientSize = new Size(957, 192);
             Controls.Add(dateTimePicker2);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -138,7 +143,9 @@
             Controls.Add(richTextBox2);
             Controls.Add(richTextBox3);
             Controls.Add(richTextBox1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "tasks";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "tasks";
             ResumeLayout(false);
             PerformLayout();

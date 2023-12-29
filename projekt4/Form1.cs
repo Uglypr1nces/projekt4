@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace projekt4
 {
@@ -8,11 +9,38 @@ namespace projekt4
     {
         private tasks tasksform;
         private List<task> taskss = new List<task>();
-
+        public string csvfile = Path.Combine(@"C:\Users\aqua\source\repos\projekt93\projekt4\databank\tasks.csv");
         public ToDoApp()
         {
             InitializeComponent();
             tasksform = new tasks();
+            var lines = File.ReadLines(csvfile);
+            foreach (var line in lines.Skip(1))
+            {
+                var values = line.Split(';');
+
+                // Check if values array has enough elements
+                if (values.Length >= 4)
+                {
+                    string name = values[0].Trim();
+                    string description = values[1].Trim();
+                    string importance = values[2].Trim();
+
+                    // Adjust the date parsing to handle the format
+                    string[] dateParts = values[3].Trim().Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    string date = $"{dateParts[1]} {dateParts[2]} {dateParts[3]}";
+
+                    // Continue with your existing code...
+                    task newtask = new task(name, description, importance, date);
+                    taskss.Add(newtask);
+                    listBox1.Items.Add(newtask.TaskName);
+                }
+                else
+                {
+                    MessageBox.Show($"Invalid line in CSV file: {line}");
+                }
+            }
+
         }
 
         public void button1_Click(object sender, EventArgs e)
@@ -29,6 +57,20 @@ namespace projekt4
                     task newtask = new task(taskName, importance, date, description);
                     listBox1.Items.Add(taskName);
                     taskss.Add(newtask);
+                    try
+                    {
+                        using (StreamWriter sw = File.AppendText(csvfile))
+                        {
+                            sw.WriteLine($"{newtask.TaskName};{newtask.Description};{newtask.Importance};{newtask.Date}");
+                        }
+
+                        MessageBox.Show("task added.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"An error occurred while reading the CSV file: {ex.Message}");
+
+                    }
                 }
             }
         }
@@ -90,41 +132,18 @@ namespace projekt4
                     }
                 }
             }
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (taskss.Count > 0)
-            {
-                task currenttask = taskss[0];
-                label2.Text = currenttask.TaskName;
-                label3.Text = currenttask.Importance;
-                label4.Text = currenttask.Date;
-                label5.Text = currenttask.Description;
-            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             if (taskss.Count > 0)
             {
-                task currenttask = taskss[0];
+                task currenttask = taskss[listBox1.SelectedIndex];
                 label2.Text = currenttask.TaskName;
                 label3.Text = currenttask.Importance;
-                label4.Text = currenttask.Date;
-                label5.Text = currenttask.Description;
+                label4.Text = currenttask.Description;
+                label5.Text = currenttask.Date;
             }
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

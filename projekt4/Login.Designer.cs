@@ -41,6 +41,8 @@
             txtpassword = new TextBox();
             log_in = new Button();
             panel3 = new Panel();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
             button2 = new Button();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -48,8 +50,6 @@
             textBox3 = new TextBox();
             textBox2 = new TextBox();
             button1 = new Button();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -118,7 +118,6 @@
             label2.Size = new Size(104, 20);
             label2.TabIndex = 7;
             label2.Text = "Clear Fields";
-            label2.Click += label2_Click_1;
             // 
             // label3
             // 
@@ -182,7 +181,6 @@
             log_in.TabIndex = 6;
             log_in.Text = "LOG IN";
             log_in.UseVisualStyleBackColor = false;
-            log_in.Click += button1_Click;
             // 
             // panel3
             // 
@@ -199,7 +197,26 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(339, 507);
             panel3.TabIndex = 13;
-            panel3.Paint += panel3_Paint;
+            // 
+            // textBox5
+            // 
+            textBox5.BackColor = SystemColors.InactiveCaptionText;
+            textBox5.ForeColor = SystemColors.MenuHighlight;
+            textBox5.Location = new Point(115, 183);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(100, 23);
+            textBox5.TabIndex = 18;
+            textBox5.Text = "Username";
+            // 
+            // textBox4
+            // 
+            textBox4.BackColor = SystemColors.InactiveCaptionText;
+            textBox4.ForeColor = SystemColors.MenuHighlight;
+            textBox4.Location = new Point(115, 248);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(100, 23);
+            textBox4.TabIndex = 17;
+            textBox4.Text = "Kennwort";
             // 
             // button2
             // 
@@ -207,7 +224,7 @@
             button2.Name = "button2";
             button2.Size = new Size(279, 47);
             button2.TabIndex = 16;
-            button2.Text = "button2";
+            button2.Text = "sign up";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -264,30 +281,9 @@
             button1.Name = "button1";
             button1.Size = new Size(279, 45);
             button1.TabIndex = 14;
-            button1.Text = "button1";
+            button1.Text = "log in";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
-            // 
-            // textBox4
-            // 
-            textBox4.BackColor = SystemColors.InactiveCaptionText;
-            textBox4.ForeColor = SystemColors.MenuHighlight;
-            textBox4.Location = new Point(115, 248);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 17;
-            textBox4.Text = "Kennwort";
-            // 
-            // textBox5
-            // 
-            textBox5.BackColor = SystemColors.InactiveCaptionText;
-            textBox5.ForeColor = SystemColors.MenuHighlight;
-            textBox5.Location = new Point(115, 183);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 18;
-            textBox5.Text = "Username";
-            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // form1
             // 
@@ -315,7 +311,6 @@
             Name = "form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "form1";
-            Load += form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel3.ResumeLayout(false);
